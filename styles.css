@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: rgba(24, 24, 24, 1);
+  --main-text: #e4e4e4;
+  --lightgray: #444;
+  --darkgray: #e4e4e4;
+  --mediumgray: #aaa;
+  --black: #000;
+  --link: #6aa7dc;
+  --green: #99ffdd;
+}
+
+#toggleDarkMode {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  user-select: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media (hover: hover) {
+  #toggleDarkMode:hover {
+    opacity: 0.6;
+  }
+}
+
+@media (hover: hover) {
+  :hover#toggleDarkMode {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  max-width: 620px;
+  padding: 2rem;
+  margin: auto;
+  background: var(--background);
+  color: var(--main-text);
+}
+
+header {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.2em;
+}
+
+hr {
+  border: 0px solid var(--black);
+  border-top: 1px solid var(--lightgray);
+}
+
+img {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--link);
+}
+
+h1,
+h2,
+strong {
+  color: var(--darkgray);
+}
+
+h2,
+h3 {
+  font-size: 1.4em;
+  margin-top: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-top: 0.5em;
+  margin-bottom: 0.66em;
+}
+
+.large {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  ul {
+    padding: 0;
+    list-style-position: inside;
+  }
+}
+
+footer {
+  padding-top: 1em;
+}
+
+.no-indent ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.muted {
+  color: var(--mediumgray);
+  text-decoration: none;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.flex {
+  display: flex;
+}
+
+.port-link {
+  margin: 0 0.15em;
+}
+
+.green-background {
+  background-color: var(--green);
+}
+
+#toggle {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+#toggle:hover {
+  color: var(--link);
+  transition: color 0.2s ease-in-out;
+}
+
+pre {
+  display: block;
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  font-size: 0.875em;
+  tab-size: 2;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  background-color: #272822;
+  color: #fff;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #d4d0ab;
+}
+
+.token.punctuation {
+  color: #fefefe;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ffa07a;
+}
+
+.token.boolean,
+.token.number {
+  color: #00e0e0;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #abe338;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #00e0e0;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: #ffd700;
+}
+
+.token.keyword {
+  color: #00e0e0;
+}
+
+.token.regex,
+.token.important {
+  color: #ffd700;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: windowText;
+    background: window;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: window;
+  }
+
+  .token.important {
+    background: highlight;
+    color: window;
+    font-weight: normal;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.keyword,
+  .token.operator,
+  .token.selector {
+    font-weight: bold;
+  }
+
+  .token.attr-value,
+  .token.comment,
+  .token.doctype,
+  .token.function,
+  .token.keyword,
+  .token.operator,
+  .token.property,
+  .token.string {
+    color: highlight;
+  }
+
+  .token.attr-value,
+  .token.url {
+    font-weight: normal;
+  }
+}
+
+blockquote {
+  margin: 0;
+  border-left: 6px solid var(--lightgray);
+  padding-left: 10px;
+  font-style: italic;
+  color: var(--main-text);
+  opacity: 0.8;
+}
+
+#hero p {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  margin-top: 1rem;
+}
+
+#projects ul {
+  padding-left: 2.5rem; /* or try margin-left */
+  margin-top: 1.25em;
+}
+#projects li {
+  margin-bottom: 0em;
+}
